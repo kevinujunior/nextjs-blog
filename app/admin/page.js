@@ -7,6 +7,7 @@ function Page() {
     const router = useRouter()
 
     React.useEffect(() => {
+        console.log("admin",user)
         if (user == null) router.push("/")
     }, [user])
 

@@ -14,11 +14,11 @@ function Page() {
         const { result, error } = await signIn(email, password);
 
         if (error) {
-            return console.log(error)
+            return console.log("error", error)
         }
 
         // else successful
-        console.log(result)
+        console.log("signin", result)
         return router.push("/admin")
     }
     return (<div className="wrapper">
@@ -33,7 +33,7 @@ function Page() {
                     <p>Password</p>
                     <input onChange={(e) => setPassword(e.target.value)} required type="password" name="password" id="password" placeholder="password" />
                 </label>
-                <button type="submit">Sign up</button>
+                <button type="submit">Sign in</button>
             </form>
         </div>
 
